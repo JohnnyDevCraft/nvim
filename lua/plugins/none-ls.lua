@@ -17,7 +17,7 @@ return {
     )
 
     table.insert(opts.sources, cspell.code_actions)
-  end
+  end,
 	config = function()
 		local null_ls = require("null-ls")
 
