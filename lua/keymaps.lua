@@ -17,3 +17,12 @@ vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" }
 vim.keymap.set("n", "<leader>dd", vim.diagnostic.open_float, { desc = "Line diagnostics" })
 vim.keymap.set("n", "<leader>dq", vim.diagnostic.setloclist, { desc = "Diagnostics list" })
 
+-- Window navigation (use arrow keys instead of hjkl)
+vim.keymap.set("n", "<C-w><Left>", "<C-w>h", { desc = "Window left" })
+vim.keymap.set("n", "<C-w><Down>", "<C-w>j", { desc = "Window down" })
+vim.keymap.set("n", "<C-w><Up>", "<C-w>k", { desc = "Window up" })
+vim.keymap.set("n", "<C-w><Right>", "<C-w>l", { desc = "Window right" })
+vim.keymap.set("n", "<C-w>h", "<Nop>")
+vim.keymap.set("n", "<C-w>j", "<Nop>")
+vim.keymap.set("n", "<C-w>k", "<Nop>")
+vim.keymap.set("n", "<C-w>l", "<Nop>")

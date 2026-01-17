@@ -5,7 +5,6 @@ return
     opts = {
       ensure_installed = {
         "omnisharp",
-        "angular-language-server",
       },
       automatic_installation = true,
     },
