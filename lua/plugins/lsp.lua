@@ -6,6 +6,19 @@ return {
     },
     config = function()
       -- Capabilities for nvim-cmp
+      local capabilities2 = require('cmp_nvim_lsp').default_capabilities()
+      local lspconfig = require("lspconfig")
+
+      lspconfig.tsserver.setup({
+        capabilities = capabilities2
+      })
+      lspconfig.html.setup({
+        capabilities = capabilities2
+      })
+      lspconfig.lua_ls.setup({
+        capabilities = capabilities2
+      })
+
       local capabilities = vim.lsp.protocol.make_client_capabilities()
       local ok_cmp, cmp_lsp = pcall(require, "cmp_nvim_lsp")
       if ok_cmp then
